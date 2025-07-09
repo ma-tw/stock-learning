@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Learning Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>株式学習ゲーム</h1>
+
+    <div id="game-controls">
+        <button id="start-button">開始</button>
+        <button id="pause-button">一時停止</button>
+        <label for="speed-slider">速度:</label>
+        <input type="range" id="speed-slider" min="1" max="10" value="1">
+    </div>
+
+    <div id="game-status">
+        <p>現在日時: <span id="current-date">N/A</span></p>
+        <p>資産残高: <span id="asset-balance">---</span>円</p>
+        <p>保有株数: <span id="shares-owned">---</span>株</p>
+    </div>
+
+    <div id="chart-container">
+        <!-- 株価チャートはここに描画されます -->
+    </div>
+
+    <div id="trade-controls">
+        <input type="number" id="trade-amount" placeholder="株数" min="1">
+        <button id="buy-button">買う</button>
+        <button id="sell-button">売る</button>
+    </div>
+
+    <div id="game-result" style="display: none;">
+        <h2>ゲーム終了！</h2>
+        <p>最終資産: <span id="final-asset"></span>円</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
